@@ -29,7 +29,7 @@ const skills = [
 export const Skills = () => {
   return (
     <section className="py-20 relative overflow-hidden">
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-96 opacity-30">
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-96 opacity-40">
         <Scene3D variant="skill" />
       </div>
 
