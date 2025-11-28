@@ -6,7 +6,7 @@ import { ArrowDown } from "lucide-react";
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 opacity-40">
         <Scene3D variant="hero" />
       </div>
       

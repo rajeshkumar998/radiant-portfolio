@@ -3,7 +3,7 @@ import { OrbitControls, Float, MeshDistortMaterial } from "@react-three/drei";
 import { Suspense } from "react";
 
 interface Scene3DProps {
-  variant?: "hero" | "skill" | "project";
+  variant?: "hero" | "skill" | "project" | "about";
 }
 
 const AnimatedSphere = () => {
@@ -60,6 +60,24 @@ const AnimatedBox = () => {
   );
 };
 
+const AnimatedOctahedron = () => {
+  return (
+    <Float speed={1.8} rotationIntensity={1.2} floatIntensity={2}>
+      <mesh rotation={[0, Math.PI / 4, 0]}>
+        <octahedronGeometry args={[1.2, 0]} />
+        <MeshDistortMaterial
+          color="#f59e0b"
+          attach="material"
+          distort={0.35}
+          speed={1.8}
+          roughness={0.2}
+          metalness={0.8}
+        />
+      </mesh>
+    </Float>
+  );
+};
+
 export const Scene3D = ({ variant = "hero" }: Scene3DProps) => {
   return (
     <div className="w-full h-full">
@@ -72,6 +90,7 @@ export const Scene3D = ({ variant = "hero" }: Scene3DProps) => {
           {variant === "hero" && <AnimatedSphere />}
           {variant === "skill" && <AnimatedTorus />}
           {variant === "project" && <AnimatedBox />}
+          {variant === "about" && <AnimatedOctahedron />}
           
           <OrbitControls enableZoom={false} enablePan={false} />
         </Suspense>

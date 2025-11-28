@@ -25,7 +25,7 @@ const projects = [
 export const Projects = () => {
   return (
     <section className="py-20 relative overflow-hidden">
-      <div className="absolute left-0 top-1/3 w-1/3 h-96 opacity-20">
+      <div className="absolute left-0 top-1/3 w-1/3 h-96 opacity-30">
         <Scene3D variant="project" />
       </div>
 
